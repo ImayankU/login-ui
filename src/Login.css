@@ -1,38 +1,47 @@
 body, html {
     margin: 0;
-    padding: 0;
+    padding:0;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0c1a2a, #0b1b36);
+    background: #0b1b36; /* Background color */
+    overflow:hidden;
 }
 
 .login-container {
-    width: 420Hug; /* Adjusted based on screenshot proportions */
-    height: 801Hug; /* Makes the height adjustable */
-    background-color: #0c1a2a;
-    border-radius: 10px;
-    padding: 25px;
+    width: 420px;
+    height: 680px; /* Increased height */
+    background-color: #112240; /* Login container background */
+    border-radius: 0px;
+    margin-top: 40px; /* Gap from the top */
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 5px; /* Adjusted gap from the bottom */
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     position: relative;
+    box-sizing: border-box;
 }
 
 .login-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px; /* Reduced margin-bottom */
+    background-color: #102A44; /* Header color */
+    padding: 0px; /* Removed padding */
+    border-bottom: 1px solid #2e3b4e;
 }
 
 .logo {
-    width: 80px; /* Adjust based on screenshot */
-    margin-bottom: 10px;
+    width: 100%;
+    max-width: 445px;
+    margin-bottom: 0px; /* Removed bottom margin */
 }
 
 .login-header h2 {
-    font-size: 24px; /* Adjust font size */
+    font-size: 24px;
     color: #fefefe;
     margin: 0;
 }
@@ -40,38 +49,51 @@ body, html {
 .social-login {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 5px; /* Reduced margin-bottom */
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: #2B3A50; /* Social login background color */
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .social-button {
     width: 30%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    color: #ffffff;
-    font-size: 14px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none; /* Removed border from social login buttons */
     cursor: pointer;
 }
 
 .google {
-    background-color: #0000;
+    background-image: url('./assets/google.png');
 }
 
 .facebook {
-    background-color: #0000;
+    background-image: url('./assets/facebook.png');
 }
 
 .apple {
-    background-color: #0000;
+    background-image: url('./assets/apple.png');
 }
 
 form {
+    margin-left: 8px;
+    margin-right: 8px;
     display: flex;
     flex-direction: column;
+    background-color: #1C2C3A; /* Form background color */
+    padding: 10px; /* Added padding for spacing */
+    border-radius: 5px; /* Rounded corners */
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 5px; /* Reduced margin-bottom */
+    background-color: #27394A; /* Input group color */
+    padding: 10px;
+    border-radius: 5px;
+    border: none; /* Removed border from input group */
 }
 
 .input-group label {
@@ -83,12 +105,13 @@ form {
 
 .input-group input {
     width: 100%;
-    padding: 10px;
+    padding: 5px; /* Reduced padding */
     border-radius: 5px;
-    border: 1px solid #555555;
-    background-color: #1e3759;
+    border: none; /* Removed border from input fields */
+    background-color: #2F4255; /* Input background color */
     color: #ffffff;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 .forgot-password {
@@ -96,7 +119,7 @@ form {
     text-decoration: none;
     font-size: 12px;
     margin-top: 5px;
-    align-self: flex-end;
+    text-align: center;
 }
 
 .forgot-password:hover {
@@ -106,9 +129,10 @@ form {
 .login-button {
     width: 100%;
     padding: 12px;
-    margin-top: 20px;
+    margin-top: 5px; /* Adjusted margin-top */
+    margin-bottom: 5px; /* Margin between sign-in and sign-up */
     background-color: #d4a251;
-    border: none;
+    border: none; /* Removed border */
     border-radius: 5px;
     color: #ffffff;
     font-size: 16px;
@@ -116,7 +140,8 @@ form {
 }
 
 .signup-link {
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 5px; /* Margin between sign-up and privacy policy */
     font-size: 14px;
     color: #d1d1d1;
 }
@@ -131,7 +156,9 @@ form {
 }
 
 .privacy-policy {
-    margin-top: 10px;
+    text-align: center;
+    margin-top: 5px; /* Margin between forgot password and privacy policy */
+    margin-bottom: 25px; /* Added 15px gap between privacy policy and footer */
     font-size: 12px;
     color: #d1d1d1;
 }
@@ -149,12 +176,16 @@ footer {
     text-align: center;
     font-size: 10px;
     color: #d1d1d1;
-    margin-top: 15px;
+    background-color: #112240; /* Footer background color */
+    padding: 0px; /* Added padding */
+
+    bottom: 0;
+    width: 100%;
 }
 
 .close-button {
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     right: 15px;
     font-size: 24px;
     cursor: pointer;
